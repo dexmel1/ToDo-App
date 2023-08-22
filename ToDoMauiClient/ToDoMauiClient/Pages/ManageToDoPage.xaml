@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoMauiClient.Pages.ManageToDoPage"
+             Title="Manage To Dos">
+    <Grid RowDefinitions="*, Auto" ColumnDefinitions="*,*,*" ColumnSpacing="5">
+        <TableView Intent="Data" Grid.Row="0" Grid.ColumnSpan="3">
+            <TableRoot>
+                <TableSection Title="What do you want to do?">
+                    <EntryCell Text="{Binding Path=ToDo.ToDoName}" Placeholder="Enter new ToDo here" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <Button Text="Save" Clicked="OnSaveButtonClicked" Grid.Row="1" Grid.Column="0" Margin="5"/>
+        <Button Text="Delete" Clicked="OnDeleteButtonClicked" Grid.Row="1" Grid.Column="1" Margin="5" />
+        <Button Text="Cancel" Clicked="OnCancelClicked" Grid.Row="1" Grid.Column="2" Margin="5"/>
+    </Grid>
+        
+    
+    
+        
+   
+        
+    
+</ContentPage>
